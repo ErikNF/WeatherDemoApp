@@ -1,0 +1,49 @@
+{
+   "coord":{
+      "lon":56.0181,
+      "lat":54.7384
+   },
+   "weather":[
+      {
+         "id":804,
+         "main":"Clouds",
+         "description":"пасмурно",
+         "icon":"04d"
+      }
+   ],
+   "base":"stations",
+   "main":{
+      "temp":18.59,
+      "feels_like":18.62,
+      "temp_min":18.59,
+      "temp_max":18.74,
+      "pressure":998,
+      "humidity":81,
+      "sea_level":998,
+      "grnd_level":979
+   },
+   "visibility":10000,
+   "wind":{
+      "speed":6.71,
+      "deg":279,
+      "gust":12.52
+   },
+   "clouds":{
+      "all":90
+   },
+   "dt":1655813928,
+   "sys":{
+      "type":2,
+      "id":146105,
+      "country":"RU",
+      "sunrise":1655768297,
+      "sunset":1655830617
+   },
+   "timezone":18000,
+   "id":479561,
+   "name":"Уфа",
+   "cod":200
+}
+
+
+
