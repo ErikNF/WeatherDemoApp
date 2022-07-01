@@ -19,6 +19,16 @@ struct WeatherView: View {
     var body: some View {
         
         ZStack(alignment: .leading) {
+            
+            //Добавление в фон градиента
+            LinearGradient(gradient: Gradient(colors: [Color(.systemBlue),
+                                                       Color(.systemRed),
+                                                       Color(.systemPink),]),
+                           startPoint: .top,
+                           endPoint: .bottom)
+            .ignoresSafeArea(.all, edges: .all)
+            
+            
             VStack {
                 VStack(alignment: .leading, spacing: 5) {
                     Text(weather.name)
@@ -38,7 +48,7 @@ struct WeatherView: View {
                             WebImage(url: weatherIconURL)
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 75)
+                                .frame(width:75)
                                 .font(.system(size: 50))
                             
                             Text(weather.weather[0].description)
@@ -57,13 +67,13 @@ struct WeatherView: View {
                     }
                     
                     Spacer()
-                        .frame(height: 80)
+                        .frame(height: 90)
                     
                     AsyncImage(url: URL(string:"https://kartinkin.net/uploads/posts/2021-01/1611329235_3-p-risovannii-fon-goroda-3.png")) { image in image
                             .resizable()
                             .cornerRadius(20)
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: 350)
+                            .frame(width:350)
                     } placeholder: {
                         ProgressView()
                     }
@@ -108,6 +118,7 @@ struct WeatherView: View {
                 .foregroundColor(Color(hue: 0.656, saturation: 0.787, brightness: 0.354))
                 .background(.white)
                 .cornerRadius(20, corners: [.topLeft, .topRight])
+          
                 
             }
             
@@ -115,7 +126,8 @@ struct WeatherView: View {
       
             
         .edgesIgnoringSafeArea(.bottom)
-        .background(Color(hue: 0.656, saturation: 0.787, brightness: 0.354))
+        
+//        .background(Color(hue: 0.656, saturation: 0.787, brightness: 0.354))
         .preferredColorScheme(.dark)
         
     }
